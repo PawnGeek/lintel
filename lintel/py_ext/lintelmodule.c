@@ -486,7 +486,7 @@ frame_count(PyObject *self, PyObject *args, PyObject *kw)
 
         if (!PyArg_ParseTupleAndKeywords(args,
                                          kw,
-                                         "s|I:get_video_frame_num",
+                                         "s|I:frame_count",
                                          kwlist,
                                          &filename,
                                          &timeout))
@@ -657,7 +657,7 @@ static PyMethodDef lintel_methods[] = {
         {"frame_count",
          (PyCFunction)frame_count,
          METH_VARARGS | METH_KEYWORDS,
-         PyDoc_STR("frame_count(filename, should_key) -> "
+         PyDoc_STR("frame_count(filename, timeout) -> "
                    "frame_num")},
         {NULL, NULL, 0, NULL}
 };
